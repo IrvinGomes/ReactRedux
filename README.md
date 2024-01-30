@@ -87,3 +87,55 @@ graph TD;
    ReactRedux-->Redux;
 ```
 React-Redux is the official library for Redux in React. It offers a couple of functions that can be used to help you connect the React Aplication with Redux.
+
+---
+
+### Three Core Concepts 
+
+|**Cake Shop Scenario**|**Redux**|**Purpose**|
+|----------------------|---------|-----------|
+|Shop                  |Store    |Holds the state of your application|
+|Intention to BUY_CAKE |Action   |Describes what happened|
+|Shopkeeper            |Reducer  |Ties the store and actions together|
+
+`Store`: holds the state of your application
+
+`Action`: describes the changes in the state of the application
+
+`Reducer`: actually carries out the state transition depending on the action
+
+### Three Pinciples
+
+>#### First principle
+>---
+>The state of your whole application is stored in an object tree within a single store
+> * Maintain our application state in a single object which would be managed by Redux store
+
+>#### Second principle
+>---
+>The only way to change the state is to emit an action, an object decribing what happened
+> * To update the state of your app, you need to let Redux know about that with an action
+> * Not allowed to directly update the state object
+
+>#### Third principle
+>---
+>To specify how the state tree is transformed by action, you write pure reducers
+> * Reducer - `(previousState, action) => newState`
+
+```javascript
+const reducer = (state, action) => {
+    switch(action.type){
+        case BUY_CAKE: return {
+            numOfCakes: state.numOfCakes - 1
+        }
+    }
+}
+```
+
+```mermaid
+graph LR;
+   JavaScript_Application--dispach-->Action;
+   Action-->Reducer;
+   Reducer-->ReduxStore-State;
+   ReduxStore-State--subscribed-->JavaScript_Application
+```
