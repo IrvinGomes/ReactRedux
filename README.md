@@ -84,6 +84,6 @@ graph TD;
    React-->ReactRedux;
    Redux-->ReactRedux;
    ReactRedux-->React;
-   ReactRedux-->Red
+   ReactRedux-->Redux;
 ```
 React-Redux is the official library for Redux in React. It offers a couple of functions that can be used to help you connect the React Aplication with Redux.
