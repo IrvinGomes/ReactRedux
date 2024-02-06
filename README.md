@@ -221,25 +221,50 @@ state={
 `error` - Display error to the user
 
 #### Actions
+
 It will be three
-* FETCH_USERS_REQUEST
-    * Will fetch the list of users
-* FETCH_USERS_SUCCESS
-    * Fetched successfully
-* FETCH_USERS_FAILURE
-    * Error fetching the data
+
+- FETCH_USERS_REQUEST
+  - Will fetch the list of users
+- FETCH_USERS_SUCCESS
+  - Fetched successfully
+- FETCH_USERS_FAILURE
+  - Error fetching the data
 
 #### Reducers
 
->case: FETCH_USERS_REQUEST
->>loading: true
+> case: FETCH_USERS_REQUEST
+>
+> > loading: true
 
->case: FETCH_USERS_SUCCESS
->> loading: false
->>
->> users: data (from API)
-  
->case: FETCH_USERS_FAILURE
->> loading: false
->>
->> error: error (from API)
+> case: FETCH_USERS_SUCCESS
+>
+> > loading: false
+> >
+> > users: data (from API)
+
+> case: FETCH_USERS_FAILURE
+>
+> > loading: false
+> >
+> > error: error (from API)
+
+---
+
+### Async Action creators
+
+We are gonna use two packages
+
+> **axios**
+>
+> used to create requests to an API end
+
+> **redux-thunk**
+>
+> package from redux echosystem and it is the standard way to `define async actions creator` in your application
+> basecally it is a middleware that will be applied to our store
+
+install the two packages
+```bash
+$ npm install axios redux-thunk
+```
