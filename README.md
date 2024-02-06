@@ -262,6 +262,7 @@ We are gonna use two packages
 > **redux-thunk**
 >
 > package from redux echosystem and it is the standard way to `define async actions creator` in your application
+>
 > basecally it is a middleware that will be applied to our store
 
 install the two packages
