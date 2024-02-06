@@ -207,7 +207,7 @@ Fetches a list of users from an API end point and stores it in the redux store.
 #### State
 
 ```json
-state{
+state={
     loading: true,
     data: [],
     error: ''
