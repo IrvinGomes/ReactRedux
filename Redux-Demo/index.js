@@ -1,6 +1,10 @@
 const redux = require("redux");
+const reduxLogger = require("redux-logger");
+
 const createStore = redux.createStore;
 const combineReducers = redux.combineReducers;
+const applyMiddleware = redux.applyMiddleware;
+const logger = reduxLogger.createLogger();
 
 //Actions
 const BUY_CAKE = "BUY_CAKE";
@@ -137,12 +141,12 @@ const rootReducer = combineReducers({
   cake: CakeReducer,
   iceCream: IceCreamReducer,
 });
-
-const combinedStore = createStore(rootReducer);
+console.log("------------------");
+console.log("STARTING COMBINED");
+console.log("------------------");
+const combinedStore = createStore(rootReducer, applyMiddleware(logger));
 console.log("Initial Combined State", combinedStore.getState());
-const combinedUnsibscribe = combinedStore.subscribe(() => {
-  console.log("Updated Combined State", combinedStore.getState());
-});
+const combinedUnsibscribe = combinedStore.subscribe(() => {});
 combinedStore.dispatch(buyCake());
 combinedStore.dispatch(buyCake());
 combinedStore.dispatch(bakeCake());

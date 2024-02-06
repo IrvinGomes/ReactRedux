@@ -139,3 +139,10 @@ graph LR;
    Reducer-->ReduxStore-State;
    ReduxStore-State--subscribed-->JavaScript_Application
 ```
+---
+### Middleware
+#### It is the suggested way to extend Redux with custom functionality
+* It provides a third-party extesion point between dispatching an action, and the moment it reaches the reducer
+* Use middleware for logging, crash reporting, performing asynchronos tasks etc
+
+Using the package `redux-logger`
