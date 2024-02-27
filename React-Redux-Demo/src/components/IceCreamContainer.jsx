@@ -5,7 +5,7 @@ const IceCreamContainer = (props) => {
   return (
     <div>
       <h2>Number of Ice Cream - {props.numOfIceCreams}</h2>
-      <button onClick={props.buyIceCream}>Buy Icecream</button>
+      <button onClick={props.buyIceCream}>Buy Ice Cream</button>
       <button onClick={props.makeIceCream}>Make Ice Cream</button>
     </div>
   );
