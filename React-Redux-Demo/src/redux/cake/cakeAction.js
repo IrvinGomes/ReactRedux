@@ -5,6 +5,7 @@ export const buyCake = () => {
     type: BUY_CAKE,
   };
 };
+
 export const bakeCake = () => {
   return {
     type: BAKE_CAKE,

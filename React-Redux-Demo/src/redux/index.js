@@ -1,4 +1,3 @@
-export { buyCake } from "./cake/cakeAction";
-export { bakeCake } from "./cake/cakeAction";
-export { buyIceCream } from "./icecream/iceCreamAction";
-export { makeIceCream } from "./icecream/iceCreamAction";
+export { buyBread, bakeBread } from "./bread/breadAction";
+export { buyCake, bakeCake } from "./cake/cakeAction";
+export { buyIceCream, makeIceCream } from "./icecream/iceCreamAction";
